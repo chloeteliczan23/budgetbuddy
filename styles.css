@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+}
+/* Reset / base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA; /* Off-White */
+    color: #2E2E2E; /* Dark Gray */
+    line-height: 1.6;
+}
+
+/* Layout */
+header, footer {
+    background-color: #1A3A5F; /* Navy Blue */
+    color: #FAFAFA;
+    padding: 16px 24px;
+}
+
+main {
+    padding: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #1A3A5F; /* Navy Blue */
+    margin-bottom: 12px;
+}
+
+/* Content links */
+main a {
+    color: #FF7A59; /* Coral */
+}
+
+/* Cards */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #6ED3B5; /* Mint Green */
+    color: #1A3A5F;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.button:hover {
+    background-color: #FF7A59; /* Coral */
+    color: #FAFAFA;
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}

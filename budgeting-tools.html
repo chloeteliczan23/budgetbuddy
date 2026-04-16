@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Theme -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0a1a2f",
+              mint: "#b8f2e6",
+              coral: "#ff6f61",
+              offwhite: "#f7f7f7",
+              darkgray: "#2e2e2e"
+            },
+            fontFamily: { poppins: ["Poppins", "sans-serif"] }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>BudgetBuddy | Budgeting Tools</title>
+</head>
+
+<body class="bg-offwhite dark:bg-darkgray text-darkgray dark:text-offwhite font-poppins transition-colors duration-300">
+
+<!-- HEADER -->
+<header class="p-4 shadow bg-mint dark:bg-navy transition-colors duration-300">
+    <nav class="flex justify-between items-center">
+
+        <!-- NAV LINKS -->
+        <ul class="flex gap-6 text-lg font-semibold">
+            <li><a href="index.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-house"></i> <span data-key="navHome">Home</span></a></li>
+
+            <li><a href="budgeting-tools.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-calculator"></i> <span data-key="navTools">Budgeting Tools</span></a></li>
+
+            <li><a href="financial-education.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-graduation-cap"></i> <span data-key="navEducation">Financial Education</span></a></li>
+
+            <li><a href="resources.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-folder-open"></i> <span data-key="navResources">Resources</span></a></li>
+
+            <li><a href="contact.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-envelope"></i> <span data-key="navContact">Contact</span></a></li>
+        </ul>
+
+        <!-- RIGHT-SIDE BUTTONS -->
+        <div class="flex items-center gap-4">
+
+            <!-- LANGUAGE GROUP -->
+            <div class="flex gap-2">
+                <button id="lang-en"
+                        class="px-3 py-1 bg-white dark:bg-darkgray text-navy dark:text-mint border border-navy dark:border-mint rounded font-semibold transition">
+                    EN
+                </button>
+
+                <button id="lang-es"
+                        class="px-3 py-1 bg-coral dark:bg-mint text-white dark:text-navy border border-navy dark:border-mint rounded font-semibold transition">
+                    ES
+                </button>
+            </div>
+
+            <!-- THEME TOGGLE -->
+            <button id="theme-toggle"
+                    class="px-3 py-1 bg-white dark:bg-coral text-navy dark:text-white border border-navy dark:border-mint rounded font-semibold transition">
+                ☀ / 🌙
+            </button>
+
+        </div>
+
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="p-6 max-w-4xl mx-auto">
+
+    <h1 class="text-4xl font-bold mb-4" data-key="toolsTitle">Budgeting Tools</h1>
+
+    <p class="mb-6 text-lg" data-key="toolsIntro">
+        Use these tools to plan your monthly spending and track your financial habits.
+    </p>
+
+    <!-- MONTHLY BUDGET BUILDER -->
+    <div class="p-6 bg-white dark:bg-navy rounded-lg shadow hover:shadow-lg transition mb-6">
+        <h2 class="text-2xl font-semibold mb-2" data-key="toolsBudgetBuilder">Monthly Budget Builder</h2>
+
+        <p class="mb-4" data-key="toolsBudgetBuilderDesc">
+            List your income and expenses to build a monthly budget.
+        </p>
+
+        <img 
+            src="https://www.womansworld.com/wp-content/uploads/2024/06/2_5c1c84.jpg?quality=86&strip=all"
+            alt="Budgeting chart"
+            class="rounded-lg shadow mb-4">
+
+        <a href="#"
+           class="px-4 py-2 bg-coral dark:bg-mint text-white dark:text-navy rounded font-semibold inline-block"
+           data-key="openTool">
+           Open Tool
+        </a>
+    </div>
+
+    <!-- EXPENSE TRACKER -->
+    <div class="p-6 bg-white dark:bg-navy rounded-lg shadow hover:shadow-lg transition mb-6">
+        <h2 class="text-2xl font-semibold mb-2" data-key="toolsExpenseTracker">Expense Tracker</h2>
+
+        <p class="mb-4" data-key="toolsExpenseTrackerDesc">
+            Record your daily purchases to understand your spending habits.
+        </p>
+
+        <a href="expense-tracker.html"
+           class="px-4 py-2 bg-coral dark:bg-mint text-white dark:text-navy rounded font-semibold inline-block"
+           data-key="openTool">
+           Open Tool
+        </a>
+    </div>
+
+    <!-- SAVINGS GOAL PLANNER -->
+    <div class="p-6 bg-white dark:bg-navy rounded-lg shadow hover:shadow-lg transition mb-6">
+        <h2 class="text-2xl font-semibold mb-2" data-key="toolsSavingsGoal">Savings Goal Planner</h2>
+
+        <p class="mb-4" data-key="toolsSavingsGoalDesc">
+            Set a savings goal and track your progress over time.
+        </p>
+
+        <a href="savings-goal-planner.html"
+           class="px-4 py-2 bg-coral dark:bg-mint text-white dark:text-navy rounded font-semibold inline-block"
+           data-key="openTool">
+           Open Tool
+        </a>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="p-4 text-center mt-10 bg-white dark:bg-navy transition-colors duration-300">
+    <p class="text-darkgray dark:text-mint" data-key="footerText">© 2026 BudgetBuddy. All rights reserved.</p>
+</footer>
+
+<!-- LANGUAGE SCRIPT -->
+<script src="js/lang.js"></script>
+
+<!-- THEME SCRIPT -->
+<script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+        html.classList.remove("dark");
+    } else {
+        html.classList.add("dark");
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+        if (html.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    // Language toggle
+    document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-es").addEventListener("click", () => setLanguage("es"));
+
+    const savedLang = localStorage.getItem("lang") || "en";
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>

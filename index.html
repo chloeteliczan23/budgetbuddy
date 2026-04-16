@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Theme -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0a1a2f",
+              mint: "#b8f2e6",
+              coral: "#ff6f61",
+              offwhite: "#f7f7f7",
+              darkgray: "#2e2e2e"
+            },
+            fontFamily: { poppins: ["Poppins", "sans-serif"] }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>BudgetBuddy | Home</title>
+</head>
+
+<body class="bg-offwhite dark:bg-darkgray text-darkgray dark:text-offwhite font-poppins transition-colors duration-300">
+
+<!-- HEADER -->
+<header class="p-4 shadow bg-mint dark:bg-navy transition-colors duration-300">
+    <nav class="flex justify-between items-center">
+
+        <!-- NAV LINKS -->
+        <ul class="flex gap-6 text-lg font-semibold">
+            <li><a href="index.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-house"></i> <span data-key="navHome">Home</span></a></li>
+
+            <li><a href="budgeting-tools.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-calculator"></i> <span data-key="navTools">Budgeting Tools</span></a></li>
+
+            <li><a href="financial-education.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-graduation-cap"></i> <span data-key="navEducation">Financial Education</span></a></li>
+
+            <li><a href="resources.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-folder-open"></i> <span data-key="navResources">Resources</span></a></li>
+
+            <li><a href="contact.html" class="text-navy dark:text-mint hover:text-coral transition">
+                <i class="fa-solid fa-envelope"></i> <span data-key="navContact">Contact</span></a></li>
+        </ul>
+
+        <!-- RIGHT-SIDE BUTTONS -->
+        <div class="flex items-center gap-4">
+
+            <!-- LANGUAGE GROUP -->
+            <div class="flex gap-2">
+                <button id="lang-en"
+                        class="px-3 py-1 bg-white dark:bg-darkgray text-navy dark:text-mint border border-navy dark:border-mint rounded font-semibold transition">
+                    EN
+                </button>
+
+                <button id="lang-es"
+                        class="px-3 py-1 bg-coral dark:bg-mint text-white dark:text-navy border border-navy dark:border-mint rounded font-semibold transition">
+                    ES
+                </button>
+            </div>
+
+            <!-- THEME TOGGLE -->
+            <button id="theme-toggle"
+                    class="px-3 py-1 bg-white dark:bg-coral text-navy dark:text-white border border-navy dark:border-mint rounded font-semibold transition">
+                ☀ / 🌙
+            </button>
+
+        </div>
+
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="w-full bg-gradient-to-b from-mint to-offwhite dark:from-navy dark:to-darkgray py-20 shadow-inner transition-colors duration-300">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center px-6">
+
+        <!-- Logo Badge -->
+        <div class="inline-flex items-center gap-4 bg-white dark:bg-darkgray px-10 py-6 rounded-2xl shadow-xl border border-mint dark:border-coral mb-6 transition">
+            <i class="fa-solid fa-piggy-bank text-coral dark:text-mint text-6xl"></i>
+            <span class="text-navy dark:text-mint font-bold text-6xl">BudgetBuddy</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-5xl font-bold text-navy dark:text-mint mb-4" data-key="homeHelping">
+            Helping Students Save Smarter
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg md:text-xl text-darkgray dark:text-offwhite max-w-2xl mb-8" data-key="homeHeroSub">
+            Take control of your money with simple tools, clear guidance, and student‑friendly budgeting support.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="budgeting-tools.html"
+           class="px-8 py-3 bg-coral dark:bg-mint text-white dark:text-navy rounded-lg text-lg font-semibold shadow-md hover:opacity-90 transition"
+           data-key="homeStartBudget">
+           Start Your Budget
+        </a>
+
+        <!-- Decorative Illustration -->
+        <div class="mt-12 w-full max-w-3xl bg-white dark:bg-darkgray rounded-2xl shadow-lg p-8 border border-mint dark:border-coral transition">
+            <div class="flex justify-center gap-10 text-coral dark:text-mint text-5xl">
+                <i class="fa-solid fa-calculator"></i>
+                <i class="fa-solid fa-chart-line"></i>
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="p-6 max-w-4xl mx-auto">
+
+    <h2 class="text-3xl font-bold mb-4" data-key="homeWelcome">Welcome to BudgetBuddy</h2>
+
+    <p class="mb-8 text-lg" data-key="homeIntro">
+        BudgetBuddy helps college students take control of their money with simple tools, guides, and resources.
+    </p>
+
+    <!-- FEATURE CARDS -->
+    <section class="grid md:grid-cols-2 gap-6">
+
+        <!-- Budget Builder -->
+        <div class="p-6 bg-white dark:bg-navy rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold mb-2" data-key="toolsBudgetBuilder">Monthly Budget Builder</h3>
+            <p class="mb-4" data-key="toolsBudgetBuilderDesc">
+                List your income and expenses to build a monthly budget.
+            </p>
+            <a href="budgeting-tools.html"
+               class="px-4 py-2 bg-coral dark:bg-mint text-white dark:text-navy rounded font-semibold inline-block"
+               data-key="homeStartBudget">
+               Start Budgeting
+            </a>
+        </div>
+
+        <!-- Education -->
+        <div class="p-6 bg-white dark:bg-navy rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold mb-2" data-key="eduBudgetBasics">Budgeting Basics</h3>
+            <p class="mb-4" data-key="eduBudgetBasicsDesc">
+                Understand the difference between needs and wants.
+            </p>
+            <a href="financial-education.html"
+               class="px-4 py-2 bg-coral dark:bg-mint text-white dark:text-navy rounded font-semibold inline-block"
+               data-key="homeLearnMore">
+               Learn More
+            </a>
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="p-4 text-center mt-10 bg-white dark:bg-navy transition-colors duration-300">
+    <p class="text-darkgray dark:text-mint" data-key="footerText">© 2026 BudgetBuddy. All rights reserved.</p>
+</footer>
+
+<!-- LANGUAGE SCRIPT -->
+<script src="js/lang.js"></script>
+
+<!-- THEME SCRIPT -->
+<script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+        html.classList.remove("dark");
+    } else {
+        html.classList.add("dark");
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+        if (html.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    // Language toggle
+    document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-es").addEventListener("click", () => setLanguage("es"));
+
+    const savedLang = localStorage.getItem("lang") || "en";
+    setLanguage(savedLang);
+</script>
+
+</body>
+</html>
