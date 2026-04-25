@@ -8,9 +8,7 @@ This project demonstrates full‑cycle web development: planning, building, refi
 
 ## 🌐 Live Demo
 **Live Website:**  
-https://<your-username>.github.io/budgetbuddy/
-
-(Replace with your actual GitHub Pages URL once deployed.)
+https://chloeteliczan23.github.io/budgetbuddy/
 
 ---
 
